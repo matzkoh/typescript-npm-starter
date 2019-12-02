@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@1.1.6
+
+jobs:
+  test:
+    executor:
+      name: node/default
+      tag: "12"
+    steps:
+      - checkout
+      - node/with-cache:
+          dir: ~/.npm
+          steps:
+            - run: npm ci
+      - run: npm test
+
+workflows:
+  default:
+    jobs:
+      - test

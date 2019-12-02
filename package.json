@@ -1,0 +1,54 @@
+{
+  "name": "typescript-npm-starter",
+  "version": "0.0.0-development",
+  "description": "",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/lib/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "bin": {
+    "typescript-npm-starter": "dist/bin/index.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "run-p build:*",
+    "build:common": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "fix": "run-p fix:*",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint --ext js,ts .",
+    "lint:prettier": "prettier -l \"**/*.{json,md,yml}\"",
+    "lint:type": "tsc --noEmit",
+    "test": "run-s lint test:*",
+    "test:unit": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "@typescript-eslint/eslint-plugin": "2.10.0",
+    "@typescript-eslint/parser": "2.10.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-simple-import-sort": "5.0.0",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "prettier-plugin-packagejson": "2.0.4",
+    "rimraf": "3.0.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.2"
+  },
+  "engines": {
+    "node": ">= 12",
+    "npm": ">= 6.12"
+  }
+}
