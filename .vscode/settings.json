@@ -5,19 +5,12 @@
   "[typescript]": {
     "editor.formatOnSave": false
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.formatOnSave": true,
   "editor.rulers": [100],
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "autoFix": true,
-      "language": "javascript"
-    },
-    {
-      "autoFix": true,
-      "language": "typescript"
-    }
-  ],
+  "eslint.validate": ["javascript", "typescript"],
   "prettier.disableLanguages": ["javascript", "typescript"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
