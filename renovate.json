@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":unpublishSafe",
+    ":prNotPending",
+    ":automergeMinor",
+    ":automergeBranch"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}
