@@ -23,7 +23,8 @@ module.exports = {
     'import/order': 'off',
     'no-console': 'off',
     'no-empty': ['error', { allowEmptyCatch: true }],
-    'simple-import-sort/sort': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'sort-imports': 'off',
   },
   overrides: [
@@ -31,7 +32,8 @@ module.exports = {
       files: '*.js',
       rules: {
         'import/order': ['error', { 'newlines-between': 'always' }],
-        'simple-import-sort/sort': 'off',
+        'simple-import-sort/imports': 'off',
+        'simple-import-sort/exports': 'off',
       },
     },
     {
