@@ -25,6 +25,7 @@
     "lint:eslint": "eslint --ext js,ts .",
     "lint:prettier": "prettier -l \"**/*.{json,md,yml}\"",
     "lint:type": "tsc --noEmit",
+    "prepare": "husky install",
     "test": "run-s lint test:*",
     "test:unit": "jest"
   },
@@ -38,7 +39,7 @@
     "eslint-plugin-import": "2.23.4",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
-    "husky": "4.3.8",
+    "husky": "7.0.0",
     "jest": "27.0.6",
     "lint-staged": "11.0.0",
     "npm-run-all": "4.1.5",
