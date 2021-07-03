@@ -5,6 +5,4 @@ module.exports = {
   collectCoverage: true,
   errorOnDeprecated: true,
   resetMocks: true,
-  testEnvironment: 'node',
-  timers: 'fake',
 }
